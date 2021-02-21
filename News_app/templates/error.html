@@ -1,0 +1,23 @@
+{% with legend = "You succeeded!" %}
+  {% include 'base.html' %}
+{% endwith %}
+
+<body>
+<div class="container">
+{% include 'titlebar.html' %}
+<h2>Oops!</h2>
+
+<p>Application encountered an error trying to process </p>
+
+<hr>
+<p>The exception was:</p>
+
+<b>
+<code>
+{{exception}}
+</code>
+</b>
+
+<p><h5>Please cut+paste this entire page into an email and send it to admin@newsapp.com.</h6>
+</div>
+</body> </html>

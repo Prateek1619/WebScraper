@@ -1,0 +1,22 @@
+{% with legend = "You succeeded!" %}
+  {% include 'base.html' %}
+{% endwith %}
+
+
+<body>
+<div class="container">
+{% include 'titlebar.html' %}
+
+    {%for x in feed%}
+    <div class="card d-grid border border-dark border border-2">
+        <div class="card-header fw-bolder p-3 mb-2 bg-info text-dark">
+        {{x.title}}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title fw-normal gap-2">{{x.shorttxt}}</h5>
+        <a href="{{x.url}}" class="btn btn-primary">Go</a>
+    </div>
+    </div><br>
+    {%endfor%}
+</div>
+</body> </html>
